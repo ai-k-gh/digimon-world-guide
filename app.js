@@ -1,0 +1,2 @@
+document.getElementById('hb').onclick=()=>document.getElementById('nav').classList.toggle('open');
+const q=document.getElementById('q');q.oninput=()=>{const v=q.value.trim().toLowerCase();document.querySelectorAll('main tbody tr, main .card, main .grid>div, main li').forEach(e=>e.classList.toggle('hide',v&&!e.textContent.toLowerCase().includes(v)))};

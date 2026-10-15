@@ -1,0 +1,15 @@
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,"PingFang HK","Microsoft JhengHei",sans-serif;background:#0f1724;color:#e6edf3;line-height:1.6}
+a{color:#7cc4ff}header{position:sticky;top:0;z-index:9;display:flex;gap:.6em;align-items:center;background:#1b2a41;padding:.5em 1em;border-bottom:3px solid #f7a400}
+.logo{font-weight:700;color:#ffd166;text-decoration:none;white-space:nowrap}#q{margin-left:auto;padding:.4em .7em;border-radius:6px;border:0;width:min(260px,45vw)}
+#hb{display:none;font-size:1.4em;background:none;border:0;color:#fff;cursor:pointer}
+#nav{display:flex;flex-wrap:wrap;gap:.2em;background:#16233a;padding:.3em 1em}#nav a{padding:.35em .7em;border-radius:6px;text-decoration:none;color:#cfe3ff}#nav a.on,#nav a:hover{background:#f7a400;color:#111}
+main{max-width:1200px;margin:auto;padding:1em}h1{color:#ffd166}h2{border-left:6px solid #f7a400;padding-left:.5em;margin-top:1.8em}h3{color:#9ad1ff}
+.toc{background:#16233a;padding:.7em 1em;border-radius:8px;display:flex;flex-wrap:wrap;gap:.3em 1em}.toc b{width:100%}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.6em 0}table{border-collapse:collapse;width:100%;font-size:.92em}th,td{border:1px solid #2c3e5c;padding:.35em .5em;vertical-align:top}th{background:#22385a;position:sticky;top:0}tr:nth-child(even) td{background:#132036}
+td img{vertical-align:middle;image-rendering:pixelated;margin-right:3px}.ref{font-size:.85em;color:#9fb3c8}.warn{background:#3a2a10;border-left:4px solid #f7a400;padding:.5em .8em;border-radius:4px}
+.card{background:#16233a;border-radius:8px;padding:.8em 1em;margin:.8em 0}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.6em}.grid div{background:#16233a;border-radius:8px;padding:.5em;text-align:center;font-size:.85em}.grid img{max-width:100%;image-rendering:pixelated}
+.el{display:inline-block;padding:0 .4em;border-radius:4px;font-weight:700;color:#111}.Fire{background:#ff7b54}.Battle{background:#ffd166}.Air{background:#9ad1ff}.Earth{background:#8fd694}.Ice{background:#b8f2ff}.Mech{background:#c9c9c9}.Filth{background:#c49a6c}
+.techlist{background:#0b3a7a;border:3px solid #cfe3ff;border-radius:6px;font-family:monospace}.techlist th{background:#06275a}.techlist td{background:#0b3a7a!important}
+.hide{display:none!important}footer{text-align:center;font-size:.8em;color:#8aa;padding:2em 1em}small{color:#9fb3c8}
+@media(max-width:760px){#hb{display:block}#nav{display:none;flex-direction:column}#nav.open{display:flex}.logo{font-size:.9em}
+table.stack thead{display:none}table.stack tr{display:block;border:1px solid #2c3e5c;margin-bottom:.6em;border-radius:6px}table.stack td{display:flex;gap:.5em;border:0;border-bottom:1px solid #22385a}table.stack td:before{content:attr(data-l);font-weight:700;min-width:6.5em;color:#ffd166}}
