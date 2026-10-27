@@ -1,30 +1,31 @@
-<!doctype html><html lang="zh-HK"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>繁中漢化補丁 – 數碼暴龍大冒險 攻略</title><link rel="stylesheet" href="style.css?v=881ddd2e5f"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1b2a41"><link rel="icon" type="image/png" sizes="192x192" href="img/pwa/icon-192.png"><link rel="apple-touch-icon" href="img/pwa/apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="數碼暴龍攻略"></head><body>
+<!doctype html><html lang="zh-HK"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>繁中漢化補丁 – 數碼暴龍大冒險 攻略</title><link rel="stylesheet" href="style.css?v=acb58cff9e"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1b2a41"><link rel="icon" type="image/png" sizes="192x192" href="img/pwa/icon-192.png"><link rel="apple-touch-icon" href="img/pwa/apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="數碼暴龍攻略"></head><body>
 <header><button id="hb" aria-label="選單">☰</button><a class="logo" href="index.html">🦖 數碼暴龍大冒險 攻略</a><input id="q" type="search" placeholder="🔍 搜尋本頁（中英文都得）…"></header>
 <nav id="nav"><a href="index.html">🏠 主頁</a><a href="basics.html">🍖 基礎照顧</a><a href="training.html">🏋️ 訓練／蛋／性格</a><a href="evolution.html">🧬 進化</a><a href="techniques.html">⚔️ 技能</a><a href="recruitment.html">🏘️ 招募村民</a><a href="town.html">🏙️ 城鎮／競技場</a><a href="walkthrough.html">🗺️ 流程攻略</a><a href="map.html">🧭 地圖</a><a href="items.html">🎒 道具／卡片</a><a href="secrets.html">🔮 隱藏要素</a><a href="tools.html">🧮 工具</a><a href="references.html">📚 參考</a><a href="patch.html" class=on>🀄 漢化補丁</a></nav><main><h1>🀄 繁體中文漢化補丁</h1>
 <div class="card"><p>粉絲製作嘅 Digimon World 1（日版 Rev 1）繁體中文漢化補丁。<b>呢度唔提供遊戲鏡像</b>，要用你自己嘅日版 Rev 1 碟（BIN／CUE）。</p>
-<p>目前版本：<b>1.0.0（初版，2026-10-25 修正版）</b>。作者表示之後會有大更新，到時要用新補丁重新打一次。</p></div>
+<p>目前版本：<b>v1.0.2（技能頁修正版）</b>。</p></div>
 <div class="card">📢 <b>官方漢化資訊（作者網頁）：</b><a href="https://ko-fi.com/xenohzl">xenohzl 嘅 Ko-fi</a>。新版本、大更新以呢度為準；其他討論喺 Facebook 群組。</div>
-<h2>版本內容（1.0.0）</h2><ul>
-<li>保留完整繁中排版，移除追加玩法功能。</li>
-<li>狀態頁隱藏作息、失誤、戰鬥次數、壽命、進化時間同疲勞（文字、圖標、條形框同數值）。</li>
-<li>性質、屬性、類型用原版橫排共用長框；名字框縮短。</li>
-<li>HP、MP 字距改為 12 像素，修正字母黐埋。</li>
-<li>以上只係顯示調整，內部養成規則不變。</li></ul>
+<h2>v1.0.2 更新內容</h2><ul>
+<li>修正入<b>技能頁</b>會死機（初始化程式俾人覆寫咗）。</li>
+<li>保留之前嘅選單同地圖修正。</li></ul>
+<h2>下載包入面有咩</h2><div class="card"><p>資料夾：<code>DigimonWorld1-Rev1 TC v1.0.2</code></p><ul>
+<li><code>DigimonWorld1-Rev1-zhHant-1.0.2.xdelta</code>：標準 xdelta 補丁</li>
+<li><code>DigimonWorld1-Rev1-zhHant-1.0.2.cue</code></li>
+<li>Windows exe 工具：來源可以用<b>原版日版 Rev1、v1.0.1 或者較早嘅 v1.0.2</b>，會自動驗證。</li></ul></div>
 <h2>要用邊個版本嘅碟？</h2><div class="card"><ul>
-<li>一定要係<b>日版 Rev 1</b>，檔名通常係 <code>DigimonWorld (Japan) (Rev 1).bin</code>。</li>
+<li>標準 .xdelta <b>只可以打落未改過嘅日版 Rev 1 BIN</b>，檔名通常係 <code>DigimonWorld (Japan) (Rev 1).bin</code>。已經打咗舊漢化嘅 BIN 請用 Windows exe 工具。</li>
 <li>實測打得成功嘅原碟：BIN <b>381,162,768 bytes</b>。</li>
-<li>⚠️ 有啲標住「The Best」嘅 381,160,416 bytes 版本打唔到，會出 <code>target window checksum mismatch</code>。</li>
-<li>⚠️ 說明檔寫嘅來源大細（394,289,280）同 SHA-256 唔啱，唔使理，以打完之後嘅結果為準。</li></ul></div>
+<li>說明檔寫嘅原碟 SHA-256 開頭係 <code>44511bf9…</code>。</li>
+<li>⚠️ 有啲標住「The Best」嘅 381,160,416 bytes 版本打唔到，會出 <code>target window checksum mismatch</code>。</li></ul></div>
 <h2>Mac 打補丁步驟</h2><ol>
 <li>裝 xdelta3：Terminal 打 <code>brew install xdelta</code>（要先裝 Homebrew）。</li>
-<li>將 Rev 1 嘅 zip 解壓，同補丁 <code>.xdelta</code>、<code>.cue</code> 放喺同一個資料夾。</li>
-<li>喺嗰個資料夾執行：<br><code>xdelta3 -d -f -s "DigimonWorld (Japan) (Rev 1).bin" DigimonWorld1-Rev1-zhHant-1.0.0.xdelta DigimonWorld1-Rev1-zhHant-1.0.0.bin</code></li>
-<li>檢查：<code>shasum -a 256 DigimonWorld1-Rev1-zhHant-1.0.0.bin</code> 應該係<br><code>0ef0ef5fd8223bd900277135d69027f634b7e5486caa17558dc396ef6e0fde48</code>（大細 394,310,448 bytes）。</li>
-<li>輸出嘅 <code>.bin</code> 一定要同補丁附帶嘅 <code>DigimonWorld1-Rev1-zhHant-1.0.0.cue</code> 擺埋一齊。</li></ol>
-<p>Windows 可以用補丁附帶嘅工具，或者任何支援 xdelta／VCDIFF 嘅工具，做法一樣：來源揀原版 BIN，補丁揀 .xdelta。</p>
+<li>將原版 BIN 同補丁 <code>.xdelta</code>、<code>.cue</code> 放喺同一個資料夾。</li>
+<li>喺嗰個資料夾執行：<br><code>xdelta3 -d -f -s "DigimonWorld (Japan) (Rev 1).bin" DigimonWorld1-Rev1-zhHant-1.0.2.xdelta DigimonWorld1-Rev1-zhHant-1.0.2.bin</code></li>
+<li>檢查：<code>shasum -a 256 DigimonWorld1-Rev1-zhHant-1.0.2.bin</code> 應該係<br><code>4bc937d527bda1374121a0680cff8ac6bfc7efeb5746691cb260546ef9cdb207</code>（大細 <b>396,109,728 bytes</b>；2026-10-28 實測 OK）。</li>
+<li>輸出嘅 <code>.bin</code> 檔名一定要同 <code>.cue</code> 入面 <code>FILE</code> 嗰行一樣，兩個擺埋一齊。</li></ol>
+<p>Windows 可以直接用下載包入面嘅 exe 工具。</p>
 <h2>點樣玩</h2><ul>
-<li>喺 OpenEmu、DuckStation 等模擬器開 <b>.cue</b>（唔係 .bin）。</li>
-<li>要<b>開新遊戲</b>，或者用原版內容嘅記憶卡；<b>唔好讀舊即時存檔</b>。</li>
+<li><b>先閂咗舊遊戲</b>，再喺 OpenEmu、DuckStation 等模擬器開新嘅 <b>.cue</b>（唔係 .bin）。</li>
+<li>用記憶卡存檔或者<b>開新遊戲</b>；<b>唔好讀舊即時存檔</b>。</li>
 <li>漢化版用語可能同本站譯名唔同，以遊戲為準。</li></ul>
-<h2>更新記錄</h2><ul><li>2026-10-25：1.0.0 修正版（本頁步驟已實測）。</li><li>之後大更新：待補。</li></ul>
-</main><div id="pwa-status" class="pwa-st" hidden></div><footer>《數碼暴龍大冒險》（PS1，1999）非官方攻略整合｜資料來源見 <a href="references.html">參考</a>｜數碼暴龍名用香港譯名（HKDMC 對照表等）；技能、道具名用中文版遊戲譯名（巴哈姆特）；冇官方譯名嘅由本站翻譯，存疑嘅標 ⚠️｜細字係英文原名</footer><script src="app.js?v=881ddd2e5f"></script></body></html>
+<h2>更新記錄</h2><ul><li>2026-10-28：<b>v1.0.2 技能頁修正版</b>：修正技能頁死機，保留選單同地圖修正（本頁步驟已實測）。</li><li>2026-10-25：1.0.0 修正版：保留完整繁中排版、移除追加玩法；狀態頁隱藏作息、失誤、戰鬥次數、壽命、進化時間同疲勞；性質／屬性／類型用原版長框；HP、MP 字距 12 像素（只係顯示調整，養成規則不變）。</li></ul>
+</main><div id="pwa-status" class="pwa-st" hidden></div><footer>《數碼暴龍大冒險》（PS1，1999）非官方攻略整合｜資料來源見 <a href="references.html">參考</a>｜數碼暴龍名用香港譯名（HKDMC 對照表等）；技能、道具名用中文版遊戲譯名（巴哈姆特）；冇官方譯名嘅由本站翻譯，存疑嘅標 ⚠️｜細字係英文原名</footer><script src="app.js?v=acb58cff9e"></script></body></html>
