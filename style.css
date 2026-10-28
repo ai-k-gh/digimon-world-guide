@@ -54,7 +54,7 @@ table.evtb{width:100%;border-collapse:collapse;font-size:.9em;color:#e6edf3;back
 .evtb tr:not(.evh){border-top:1px solid #22385a;padding:6px 4px}.evtb tbody tr:not(.evh):nth-child(even) td{background:none}.evtb tbody tr:not(.evh):nth-child(even){background:#121d2f}
 .evtb td{border:0;padding:2px 6px 2px 6.4em;position:relative;max-width:none}.evtb td::before{content:attr(data-l);color:#8fa3b8;font-size:.82em;position:absolute;left:6px;top:4px}
 .evtb td.evt{display:block;white-space:normal;padding-left:6px}.evtb td.evt small{display:inline;margin-left:4px}.evtb td.evt::before{content:none}.evhm{margin-left:0}}
-/* 技能格（遊戲排法） */
+/*EXTRA*//* 技能格（遊戲排法） */
 .tgwrap{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;margin:.6em 0}
 .tgbox{flex:0 0 260px;background:#26307a;border:3px solid #7fd3ff;border-radius:8px;padding:10px 12px;color:#f2f5ff;box-shadow:0 0 0 2px #0b1220}
 .tgt{font-weight:700;color:#cfd8ff;font-size:.8em;letter-spacing:.1em;background:#1a2050;display:inline-block;padding:0 .5em;border-radius:3px}
@@ -75,3 +75,7 @@ table.evtb{width:100%;border-collapse:collapse;font-size:.9em;color:#e6edf3;back
 .tg-firet{color:#ff8a7a}.tg-battlet{color:#ff9cc0}.tg-airt{color:#ffe066}.tg-eartht{color:#8fe39b}.tg-icet{color:#8fd3ff}.tg-mecht{color:#d0d6de}.tg-filtht{color:#d6aa7c}
 .tgnote{font-size:.85em;color:#b9c4d8}
 @media(max-width:700px){.tgbox{flex:1 1 100%}.tggrid{min-width:560px}.tgr{grid-template-columns:36px repeat(8,1fr) 0}.tgl2{display:none}.tgc{font-size:.66em;min-height:52px}}
+/* 桌面闊版（只限 ≥1024px，電話版不變） */
+@media(min-width:1024px){main{max-width:1760px;padding:1.2em 2.5em}.grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}}
+@media(min-width:1440px){.tgbox{flex-basis:320px}.tgc{font-size:.8em;min-height:66px}.tgc img{width:26px;height:26px}.tgr{grid-template-columns:52px repeat(8,1fr) 52px}}
+/*/EXTRA*/
