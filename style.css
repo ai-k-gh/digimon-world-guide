@@ -54,3 +54,24 @@ table.evtb{width:100%;border-collapse:collapse;font-size:.9em;color:#e6edf3;back
 .evtb tr:not(.evh){border-top:1px solid #22385a;padding:6px 4px}.evtb tbody tr:not(.evh):nth-child(even) td{background:none}.evtb tbody tr:not(.evh):nth-child(even){background:#121d2f}
 .evtb td{border:0;padding:2px 6px 2px 6.4em;position:relative;max-width:none}.evtb td::before{content:attr(data-l);color:#8fa3b8;font-size:.82em;position:absolute;left:6px;top:4px}
 .evtb td.evt{display:block;white-space:normal;padding-left:6px}.evtb td.evt small{display:inline;margin-left:4px}.evtb td.evt::before{content:none}.evhm{margin-left:0}}
+/* 技能格（遊戲排法） */
+.tgwrap{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;margin:.6em 0}
+.tgbox{flex:0 0 260px;background:#26307a;border:3px solid #7fd3ff;border-radius:8px;padding:10px 12px;color:#f2f5ff;box-shadow:0 0 0 2px #0b1220}
+.tgt{font-weight:700;color:#cfd8ff;font-size:.8em;letter-spacing:.1em;background:#1a2050;display:inline-block;padding:0 .5em;border-radius:3px}
+.tgname{margin:.4em 0;font-size:1.15em;color:#fff;min-height:2.6em}.tgname small{display:block;font-size:.65em;color:#b9c4ee}
+.tgdl{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;margin:0}.tgdl dt{color:#ffe066;font-weight:700;font-size:.85em}.tgdl dt:after{content:" ➜";color:#5cd0ff}.tgdl dd{margin:0;color:#fff}
+.tglr{margin-top:.5em;font-size:.82em;color:#e6ebff;max-height:12em;overflow:auto}.tglr a{color:#9ad1ff}.tglr img{width:18px;height:18px;vertical-align:middle}
+.tgjump{display:inline-block;margin-top:.4em;color:#ffd166;font-size:.85em}
+.tgscroll{flex:1 1 560px;overflow-x:auto;-webkit-overflow-scrolling:touch;min-width:0}
+.tggrid{display:grid;gap:4px;min-width:600px}
+.tgr{display:grid;grid-template-columns:44px repeat(8,1fr) 44px;gap:4px;align-items:stretch}
+.tgl{color:#f2f5ff;font-weight:700;font-size:.9em;display:flex;align-items:center;justify-content:center}
+.tgn{text-align:center;color:#e6ebff;font-weight:700}
+.tgc{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:58px;padding:3px 2px;border:2px solid #3a4a66;border-radius:4px;background:#1c2738;color:#f2f5ff;font:inherit;font-size:.72em;line-height:1.15;cursor:pointer;text-align:center;word-break:break-all}
+.tgc img{width:22px;height:22px;image-rendering:pixelated}
+.tgc:hover,.tgc.sel{border-color:#ffd400;box-shadow:0 0 0 2px #ffd400}
+.tg-empty{background:#0b1220;border-color:#1c2738;cursor:default}
+.tg-fire{background:#6e2228}.tg-battle{background:#6a2a44}.tg-air{background:#5f5420}.tg-earth{background:#1f5530}.tg-ice{background:#1d4670}.tg-mech{background:#4a515c}.tg-filth{background:#4a3524}
+.tg-firet{color:#ff8a7a}.tg-battlet{color:#ff9cc0}.tg-airt{color:#ffe066}.tg-eartht{color:#8fe39b}.tg-icet{color:#8fd3ff}.tg-mecht{color:#d0d6de}.tg-filtht{color:#d6aa7c}
+.tgnote{font-size:.85em;color:#b9c4d8}
+@media(max-width:700px){.tgbox{flex:1 1 100%}.tggrid{min-width:560px}.tgr{grid-template-columns:36px repeat(8,1fr) 0}.tgl2{display:none}.tgc{font-size:.66em;min-height:52px}}
