@@ -1,0 +1,921 @@
+<!doctype html><html lang="zh-HK"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>金手指 – 數碼暴龍大冒險 攻略</title><link rel="stylesheet" href="style.css?v=bbf95600b7"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1b2a41"><link rel="icon" type="image/png" sizes="192x192" href="img/pwa/icon-192.png"><link rel="apple-touch-icon" href="img/pwa/apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="數碼暴龍攻略"></head><body>
+<header><button id="hb" aria-label="選單">☰</button><a class="logo" href="index.html">🦖 數碼暴龍大冒險 攻略</a><input id="q" type="search" placeholder="🔍 搜尋本頁（中英文都得）…"></header>
+<nav id="nav"><a href="index.html">🏠 主頁</a><a href="basics.html">🍖 基礎照顧</a><a href="training.html">🏋️ 訓練／蛋／性格</a><a href="evolution.html">🧬 進化</a><a href="techniques.html">⚔️ 技能</a><a href="recruitment.html">🏘️ 招募村民</a><a href="town.html">🏙️ 城鎮／競技場</a><a href="walkthrough.html">🗺️ 流程攻略</a><a href="map.html">🧭 地圖</a><a href="items.html">🎒 道具／卡片</a><a href="secrets.html">🔮 隱藏要素</a><a href="tools.html">🧮 工具</a><a href="references.html">📚 參考</a><a href="patch.html">🀄 漢化補丁</a><a href="cheats.html">🎮 金手指</a></nav><main><h1>金手指（GameShark／PAR 碼）</h1>
+<div class="card chwarn"><p>⚠️ <b>用漢化補丁版（TC 1.0.x）請用 <a href="#rev1">Rev 1</a> 嘅碼。</b>補丁係基於日版 Rev 1 整嘅，理論上記憶體位置唔變，但<b>未有人喺漢化版實測</b>。最容易出事係 D0 開頭／改程式嘅碼，其次改名；能力值碼最穩陣。用之前記住先備份記憶卡／儲存。</p>
+<p>初版同 Rev 1 序號都係 <b>SLPS-01797</b>（廉價版 SLPS-91233）。分版本嘅根據：1P Only 嘅「前期版／後期版」兩欄，同 Reddit 作者自己做嘅實測碼（1.0 用 16B0xx、1.1 用 16C8xx）。所有碼都逐字照抄來源，冇改過。</p></div>
+<nav class="chtabs"><a href="#v10">初版（1.0）</a><a href="#rev1">Rev 1（1.1）</a><a href="#na">未標明版本</a><a href="#ds">DuckStation 用法</a><a href="#ids">ID 表</a></nav>
+<section class="chsec" id="v10"><h2>📀 初版（1.0／前期版）</h2><button class="cpb cpall" data-c="[LIFE 3 條命]
+Type = Gameshark
+Activation = EndFrame
+3016B100 0003
+
+[開心度 100%]
+Type = Gameshark
+Activation = EndFrame
+30141D42 0064
+
+[紀律 100%]
+Type = Gameshark
+Activation = EndFrame
+30141D40 0064
+
+[失誤次數 0]
+Type = Gameshark
+Activation = EndFrame
+30141D36 0000
+
+[最大 HP 9999]
+Type = Gameshark
+Activation = EndFrame
+8016B0CC 270F
+
+[現時 HP 9999]
+Type = Gameshark
+Activation = EndFrame
+8016B0D0 270F
+
+[最大 MP 9999]
+Type = Gameshark
+Activation = EndFrame
+8016B0CE 270F
+
+[現時 MP 9999]
+Type = Gameshark
+Activation = EndFrame
+8016B0D2 270F
+
+[攻擊 999]
+Type = Gameshark
+Activation = EndFrame
+8016B0BC 03E7
+
+[防禦 999]
+Type = Gameshark
+Activation = EndFrame
+8016B0BE 03E7
+
+[速度 999]
+Type = Gameshark
+Activation = EndFrame
+8016B0C0 03E7
+
+[智力 999]
+Type = Gameshark
+Activation = EndFrame
+8016B0C2 03E7
+
+[學晒全部招式（作者實測，只限 1.0）]
+Type = Gameshark
+Activation = EndFrame
+9016b0dc FFFFFFFF
+9016b0e0 FFFFFFFF
+
+[無限金錢]
+Type = Gameshark
+Activation = EndFrame
+8013E294 967F
+8013E296 0098
+
+[無限金錢（DuckStation 32-bit 寫法）]
+Type = Gameshark
+Activation = EndFrame
+9013E294 0098967F
+
+[Max Power（DuckStation 寫法）]
+Type = Gameshark
+Activation = EndFrame
+90141D40 00640064
+9016B0BC 03E703E7
+9016B0C0 03E703E7
+
+[Max Power（16-bit 寫法）]
+Type = Gameshark
+Activation = EndFrame
+80141D40 0064
+80141D42 0064
+8016B0BC 03E7
+8016B0BE 03E7
+8016B0C0 03E7
+8016B0C2 03E7
+
+[Max Speed]
+Type = Gameshark
+Activation = EndFrame
+8016B0C0 0063
+8016B0C2 0063
+
+[無限 Energy（PSXDataCenter 叫 Infinite HP）]
+Type = Gameshark
+Activation = EndFrame
+80141130 0008
+
+[All sales of bytes]
+Type = Gameshark
+Activation = EndFrame
+8013E174 FFFF
+
+[Get gold]
+Type = Gameshark
+Activation = EndFrame
+9013E26C 000F423F
+
+[隨時可以瞓]
+Type = Gameshark
+Activation = EndFrame
+3012FE3E 0000">📋 複製成 DuckStation .cht（22 個；要填 xx 嘅 3 個唔包）</button><p class="chintro">只啱未更新嘅初版；Rev 1／漢化版用唔到。</p><h3>來源有標明初版</h3><div class="chlist"><div class="chc"><div class="chtop"><b>改拍檔種類（xx＝下面拍檔表）</b><button class="cpb" data-c="3016B084 00xx">📋 複製</button></div><pre>3016B084 00xx</pre><p class="chn">開碼喺公公獸屋企儲存，確認種類變咗，熄碼再 reset 讀檔。</p><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>年齡（xx＝01–99）</b><button class="cpb" data-c="30141D62 00xx">📋 複製</button></div><pre>30141D62 00xx</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>體重（xx＝01–99）</b><button class="cpb" data-c="30141D5A 00xx">📋 複製</button></div><pre>30141D5A 00xx</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>LIFE 3 條命</b><button class="cpb" data-c="3016B100 0003">📋 複製</button></div><pre>3016B100 0003</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>開心度 100%</b><button class="cpb" data-c="30141D42 0064">📋 複製</button></div><pre>30141D42 0064</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>紀律 100%</b><button class="cpb" data-c="30141D40 0064">📋 複製</button></div><pre>30141D40 0064</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>失誤次數 0</b><button class="cpb" data-c="30141D36 0000">📋 複製</button></div><pre>30141D36 0000</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>最大 HP 9999</b><button class="cpb" data-c="8016B0CC 270F">📋 複製</button></div><pre>8016B0CC 270F</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>現時 HP 9999</b><button class="cpb" data-c="8016B0D0 270F">📋 複製</button></div><pre>8016B0D0 270F</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>最大 MP 9999</b><button class="cpb" data-c="8016B0CE 270F">📋 複製</button></div><pre>8016B0CE 270F</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>現時 MP 9999</b><button class="cpb" data-c="8016B0D2 270F">📋 複製</button></div><pre>8016B0D2 270F</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>攻擊 999</b><button class="cpb" data-c="8016B0BC 03E7">📋 複製</button></div><pre>8016B0BC 03E7</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>防禦 999</b><button class="cpb" data-c="8016B0BE 03E7">📋 複製</button></div><pre>8016B0BE 03E7</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>速度 999</b><button class="cpb" data-c="8016B0C0 03E7">📋 複製</button></div><pre>8016B0C0 03E7</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>智力 999</b><button class="cpb" data-c="8016B0C2 03E7">📋 複製</button></div><pre>8016B0C2 03E7</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>學晒全部招式（作者實測，只限 1.0）</b><button class="cpb" data-c="9016b0dc FFFFFFFF
+9016b0e0 FFFFFFFF">📋 複製</button></div><pre>9016b0dc FFFFFFFF
+9016b0e0 FFFFFFFF</pre><p class="chs">來源：<a href="https://www.reddit.com/r/DigimonWorld/comments/1kwryvz/gameshark_digimon_world_jp_slps01797/" target="_blank" rel="noopener">Reddit r/DigimonWorld</a></p></div></div><h3>同初版地址同一組，但來源冇標版本</h3><div class="chlist"><div class="chc"><div class="chtop"><b>無限金錢</b><button class="cpb" data-c="8013E294 967F
+8013E296 0098">📋 複製</button></div><pre>8013E294 967F
+8013E296 0098</pre><p class="chs">來源：<a href="https://almarsguides.com/retro/walkthroughs/ps1/games/digimonworld/codebreaker/japan/" target="_blank" rel="noopener">Almar's Guides</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>無限金錢（DuckStation 32-bit 寫法）</b><button class="cpb" data-c="9013E294 0098967F">📋 複製</button></div><pre>9013E294 0098967F</pre><p class="chs">來源：<a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>Max Power（DuckStation 寫法）</b><button class="cpb" data-c="90141D40 00640064
+9016B0BC 03E703E7
+9016B0C0 03E703E7">📋 複製</button></div><pre>90141D40 00640064
+9016B0BC 03E703E7
+9016B0C0 03E703E7</pre><p class="chs">來源：<a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>Max Power（16-bit 寫法）</b><button class="cpb" data-c="80141D40 0064
+80141D42 0064
+8016B0BC 03E7
+8016B0BE 03E7
+8016B0C0 03E7
+8016B0C2 03E7">📋 複製</button></div><pre>80141D40 0064
+80141D42 0064
+8016B0BC 03E7
+8016B0BE 03E7
+8016B0C0 03E7
+8016B0C2 03E7</pre><p class="chs">來源：<a href="https://almarsguides.com/retro/walkthroughs/ps1/games/digimonworld/codebreaker/japan/" target="_blank" rel="noopener">Almar's Guides</a></p></div><div class="chc"><div class="chtop"><b>Max Speed</b><button class="cpb" data-c="8016B0C0 0063
+8016B0C2 0063">📋 複製</button></div><pre>8016B0C0 0063
+8016B0C2 0063</pre><p class="chs">來源：<a href="https://almarsguides.com/retro/walkthroughs/ps1/games/digimonworld/codebreaker/japan/" target="_blank" rel="noopener">Almar's Guides</a></p></div><div class="chc"><div class="chtop"><b>無限 Energy（PSXDataCenter 叫 Infinite HP）</b><button class="cpb" data-c="80141130 0008">📋 複製</button></div><pre>80141130 0008</pre><p class="chs">來源：<a href="https://almarsguides.com/retro/walkthroughs/ps1/games/digimonworld/codebreaker/japan/" target="_blank" rel="noopener">Almar's Guides</a> <a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>All sales of bytes</b><button class="cpb" data-c="8013E174 FFFF">📋 複製</button></div><pre>8013E174 FFFF</pre><p class="chs">來源：<a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>Get gold</b><button class="cpb" data-c="9013E26C 000F423F">📋 複製</button></div><pre>9013E26C 000F423F</pre><p class="chs">來源：<a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>隨時可以瞓</b><button class="cpb" data-c="3012FE3E 0000">📋 複製</button></div><pre>3012FE3E 0000</pre><p class="chs">來源：<a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div></div></section>
+<section class="chsec" id="rev1"><h2>💿 Rev 1（1.1／後期版）—漢化版用呢組</h2><button class="cpb cpall" data-c="[LIFE 3 條命]
+Type = Gameshark
+Activation = EndFrame
+8016C934 0003
+
+[開心度 100%]
+Type = Gameshark
+Activation = EndFrame
+80142776 0064
+
+[紀律 100%]
+Type = Gameshark
+Activation = EndFrame
+80142774 0064
+
+[失誤次數 0]
+Type = Gameshark
+Activation = EndFrame
+8014276A 0000
+
+[最大 HP 9999]
+Type = Gameshark
+Activation = EndFrame
+8016C900 270F
+
+[最大 MP 9999]
+Type = Gameshark
+Activation = EndFrame
+8016C902 270F
+
+[現時 HP 9999]
+Type = Gameshark
+Activation = EndFrame
+8016C904 270F
+
+[現時 MP 9999]
+Type = Gameshark
+Activation = EndFrame
+8016C906 270F
+
+[攻擊 999]
+Type = Gameshark
+Activation = EndFrame
+8016C8F0 03E7
+
+[防禦 999]
+Type = Gameshark
+Activation = EndFrame
+8016C8F2 03E7
+
+[速度 999]
+Type = Gameshark
+Activation = EndFrame
+8016C8F4 03E7
+
+[智力 999]
+Type = Gameshark
+Activation = EndFrame
+8016C8F6 03E7
+
+[學晒全部招式（作者實測，1.1）]
+Type = Gameshark
+Activation = EndFrame
+9016c910 FFFFFFFF
+9016c914 FFFFFFFF
+
+[最大＋現時 HP 9999（DuckStation：Infinite &amp; max HP）]
+Type = Gameshark
+Activation = EndFrame
+8016C900 270F
+8016C904 270F
+
+[最大＋現時 MP 9999（DuckStation：Infinite &amp; max MP）]
+Type = Gameshark
+Activation = EndFrame
+8016C902 270F
+8016C906 270F
+
+[學晒全部招式（逐個屬性）]
+Type = Gameshark
+Activation = EndFrame
+3016C910 00FF
+3016C915 00FF
+3016C911 00FF
+3016C914 00FF
+3016C912 00FF
+3016C913 00FF
+3016C916 00FF
+
+[學晒火炎系]
+Type = Gameshark
+Activation = EndFrame
+3016C910 00FF
+
+[學晒大氣系]
+Type = Gameshark
+Activation = EndFrame
+3016C911 00FF
+
+[學晒冰水系]
+Type = Gameshark
+Activation = EndFrame
+3016C912 00FF
+
+[學晒機械系]
+Type = Gameshark
+Activation = EndFrame
+3016C913 00FF
+
+[學晒自然系]
+Type = Gameshark
+Activation = EndFrame
+3016C914 00FF
+
+[學晒格鬥系]
+Type = Gameshark
+Activation = EndFrame
+3016C915 00FF
+
+[學晒汙穢系]
+Type = Gameshark
+Activation = EndFrame
+3016C916 00FF
+
+[必殺技（NG 寫法）]
+Type = Gameshark
+Activation = EndFrame
+3016C8FF 00FF
+
+[數碼暴龍變液晶畫]
+Type = Gameshark
+Activation = EndFrame
+8016C8EE 0000
+
+[屙屎標誌時間（NG 寫法）]
+Type = Gameshark
+Activation = EndFrame
+80142764 00FF">📋 複製成 DuckStation .cht（26 個；要填 xx 嘅 12 個唔包）</button><p class="chintro">用漢化補丁版就揀呢組。</p><h3>來源有標明 Rev 1（後期版）</h3><div class="chlist"><div class="chc"><div class="chtop"><b>改拍檔種類（xx＝下面拍檔表）</b><button class="cpb" data-c="3016C8B8 00xx">📋 複製</button></div><pre>3016C8B8 00xx</pre><p class="chn">開碼喺公公獸屋企儲存，確認種類變咗，熄碼再 reset 讀檔。</p><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>年齡（xx＝01–99）</b><button class="cpb" data-c="30142794 00xx">📋 複製</button></div><pre>30142794 00xx</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>體重（xx＝01–99）</b><button class="cpb" data-c="3014278E 00xx">📋 複製</button></div><pre>3014278E 00xx</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>LIFE 3 條命</b><button class="cpb" data-c="8016C934 0003">📋 複製</button></div><pre>8016C934 0003</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>開心度 100%</b><button class="cpb" data-c="80142776 0064">📋 複製</button></div><pre>80142776 0064</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>紀律 100%</b><button class="cpb" data-c="80142774 0064">📋 複製</button></div><pre>80142774 0064</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>失誤次數 0</b><button class="cpb" data-c="8014276A 0000">📋 複製</button></div><pre>8014276A 0000</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>最大 HP 9999</b><button class="cpb" data-c="8016C900 270F">📋 複製</button></div><pre>8016C900 270F</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>最大 MP 9999</b><button class="cpb" data-c="8016C902 270F">📋 複製</button></div><pre>8016C902 270F</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>現時 HP 9999</b><button class="cpb" data-c="8016C904 270F">📋 複製</button></div><pre>8016C904 270F</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>現時 MP 9999</b><button class="cpb" data-c="8016C906 270F">📋 複製</button></div><pre>8016C906 270F</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>攻擊 999</b><button class="cpb" data-c="8016C8F0 03E7">📋 複製</button></div><pre>8016C8F0 03E7</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>防禦 999</b><button class="cpb" data-c="8016C8F2 03E7">📋 複製</button></div><pre>8016C8F2 03E7</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>速度 999</b><button class="cpb" data-c="8016C8F4 03E7">📋 複製</button></div><pre>8016C8F4 03E7</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>智力 999</b><button class="cpb" data-c="8016C8F6 03E7">📋 複製</button></div><pre>8016C8F6 03E7</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>學晒全部招式（作者實測，1.1）</b><button class="cpb" data-c="9016c910 FFFFFFFF
+9016c914 FFFFFFFF">📋 複製</button></div><pre>9016c910 FFFFFFFF
+9016c914 FFFFFFFF</pre><p class="chs">來源：<a href="https://www.reddit.com/r/DigimonWorld/comments/1kwryvz/gameshark_digimon_world_jp_slps01797/" target="_blank" rel="noopener">Reddit r/DigimonWorld</a></p></div></div><h3>同 Rev 1 地址同一組，但來源冇標版本</h3><div class="chlist"><div class="chc"><div class="chtop"><b>最大＋現時 HP 9999（DuckStation：Infinite &amp; max HP）</b><button class="cpb" data-c="8016C900 270F
+8016C904 270F">📋 複製</button></div><pre>8016C900 270F
+8016C904 270F</pre><p class="chs">來源：<a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>最大＋現時 MP 9999（DuckStation：Infinite &amp; max MP）</b><button class="cpb" data-c="8016C902 270F
+8016C906 270F">📋 複製</button></div><pre>8016C902 270F
+8016C906 270F</pre><p class="chs">來源：<a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">DuckStation chtdb</a></p></div><div class="chc"><div class="chtop"><b>學晒全部招式（逐個屬性）</b><button class="cpb" data-c="3016C910 00FF
+3016C915 00FF
+3016C911 00FF
+3016C914 00FF
+3016C912 00FF
+3016C913 00FF
+3016C916 00FF">📋 複製</button></div><pre>3016C910 00FF
+3016C915 00FF
+3016C911 00FF
+3016C914 00FF
+3016C912 00FF
+3016C913 00FF
+3016C916 00FF</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>學晒火炎系</b><button class="cpb" data-c="3016C910 00FF">📋 複製</button></div><pre>3016C910 00FF</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>學晒大氣系</b><button class="cpb" data-c="3016C911 00FF">📋 複製</button></div><pre>3016C911 00FF</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>學晒冰水系</b><button class="cpb" data-c="3016C912 00FF">📋 複製</button></div><pre>3016C912 00FF</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>學晒機械系</b><button class="cpb" data-c="3016C913 00FF">📋 複製</button></div><pre>3016C913 00FF</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>學晒自然系</b><button class="cpb" data-c="3016C914 00FF">📋 複製</button></div><pre>3016C914 00FF</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>學晒格鬥系</b><button class="cpb" data-c="3016C915 00FF">📋 複製</button></div><pre>3016C915 00FF</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>學晒汙穢系</b><button class="cpb" data-c="3016C916 00FF">📋 複製</button></div><pre>3016C916 00FF</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>換裝招式第 1 格（xx＝招式 ID）</b><button class="cpb" data-c="3016C8FC 00xx">📋 複製</button></div><pre>3016C8FC 00xx</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>換裝招式第 2 格</b><button class="cpb" data-c="3016C8FD 00xx">📋 複製</button></div><pre>3016C8FD 00xx</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>換裝招式第 3 格</b><button class="cpb" data-c="3016C8FE 00xx">📋 複製</button></div><pre>3016C8FE 00xx</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>必殺技</b><button class="cpb" data-c="3016C8FF 00xx">📋 複製</button></div><pre>3016C8FF 00xx</pre><p class="chn">AT 話會隨數碼暴龍變，唔建議用。</p><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>必殺技（NG 寫法）</b><button class="cpb" data-c="3016C8FF 00FF">📋 複製</button></div><pre>3016C8FF 00FF</pre><p class="chs">來源：<a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>改數碼暴龍名（第 1 字至第 6 字，每字 +2）</b><button class="cpb" data-c="8016C920 xxxx
+8016C92A xxxx">📋 複製</button></div><pre>8016C920 xxxx
+8016C92A xxxx</pre><p class="chn">xxxx＝字型表；第 1 字 8016C920、第 6 字 8016C92A。</p><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>數碼暴龍變液晶畫</b><button class="cpb" data-c="8016C8EE 0000">📋 複製</button></div><pre>8016C8EE 0000</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>屙屎標誌出現前時間</b><button class="cpb" data-c="30142764 00xx">📋 複製</button></div><pre>30142764 00xx</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>屙屎標誌時間（NG 寫法）</b><button class="cpb" data-c="80142764 00FF">📋 複製</button></div><pre>80142764 00FF</pre><p class="chs">來源：<a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>屙屎前時間</b><button class="cpb" data-c="8014276C xxxx">📋 複製</button></div><pre>8014276C xxxx</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>肚餓前時間</b><button class="cpb" data-c="8014278A xxxx">📋 複製</button></div><pre>8014278A xxxx</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>壽命完結前時間</b><button class="cpb" data-c="80142794 xxxx">📋 複製</button></div><pre>80142794 xxxx</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div></div></section>
+<section class="chsec" id="na"><h2>❓ 未標明版本（兩個版本都可以試）</h2><button class="cpb cpall" data-c="[Bit MAX（999,999）]
+Type = Gameshark
+Activation = EndFrame
+8013ECB4 423F
+8013ECB6 000F
+
+[Get gold（NG 寫法）]
+Type = Gameshark
+Activation = EndFrame
+8013E26C 423F
+8013E26E 000F
+
+[遊戲時間唔加]
+Type = Gameshark
+Activation = EndFrame
+800E9DDC 0000
+800E9DDE 0000
+
+[遊戲時間鎖 99:59:59:59]
+Type = Gameshark
+Activation = EndFrame
+3013ECFA 0063
+3013ECF8 003B
+3013ECFD 003B
+3013ECFC 003B
+
+[圖鑑全開]
+Type = Gameshark
+Activation = EndFrame
+301650ED 00FF
+801650EE FFFF
+801650F0 FFFF
+801650F2 FFFF
+801650F4 FFFF
+
+[圖鑑全開（NG 寫法）]
+Type = Gameshark
+Activation = EndFrame
+801650ED 00FF
+801650EE FFFF
+801650F0 FFFF
+801650F2 FFFF
+801650F4 FFFF
+
+[全部獎牌]
+Type = Gameshark
+Activation = EndFrame
+801650DA FFFF
+301650DC 00FF
+
+[全部獎牌（NG 寫法）]
+Type = Gameshark
+Activation = EndFrame
+801650DA FFFF
+801650DC 00FF
+
+[全部卡片]
+Type = Gameshark
+Activation = EndFrame
+8016508C 9999
+8016508E 9999
+80165090 9999
+80165092 9999
+80165094 9999
+80165096 9999
+80165098 9999
+8016509A 9999
+8016509C 9999
+8016509E 9999
+801650A0 9999
+801650A2 9999
+801650A4 9999
+801650A6 9999
+801650A8 9999
+801650AA 9999
+801650AC 9999
+
+[獎勵訓練老虎機必中]
+Type = Gameshark
+Activation = EndFrame
+30090618 0006
+30090619 000C
+3009061A 0000
+3008EAC4 0006
+3008EAC5 000C
+3008EAC6 0000
+
+[能力一升就升到盡]
+Type = Gameshark
+Activation = EndFrame
+D008E548 0018
+8008E54A 1400
+D008E58C 0007
+8008E58E 1400
+
+[食能力 chip 全部能力 MAX]
+Type = Gameshark
+Activation = EndFrame
+D00CEE6E A602
+800CEE6E A606
+
+[唔會肚餓]
+Type = Gameshark
+Activation = EndFrame
+800A9FCC 0000
+800A9FCE 0000
+
+[屙屎都唔加失誤]
+Type = Gameshark
+Activation = EndFrame
+800A93A0 0000
+800A93A2 0000
+
+[唔出屙屎標誌]
+Type = Gameshark
+Activation = EndFrame
+800AA794 0000
+800AA796 0000
+
+[出咗標誌都唔屙]
+Type = Gameshark
+Activation = EndFrame
+800AA83C 0000
+800AA83E 0000
+
+[壽命唔減]
+Type = Gameshark
+Activation = EndFrame
+800CD788 0000
+800CD78A 0000
+
+[隨時可以哄瞓]
+Type = Gameshark
+Activation = EndFrame
+30130756 0000
+
+[屙屎前時間 0（NG 寫法）]
+Type = Gameshark
+Activation = EndFrame
+8014276C 0000
+
+[肚餓前時間 0（NG 寫法）]
+Type = Gameshark
+Activation = EndFrame
+8014278A 0000
+
+[壽命完結前時間 0（NG 寫法）]
+Type = Gameshark
+Activation = EndFrame
+80142794 0000
+
+[用招唔扣 MP]
+Type = Gameshark
+Activation = EndFrame
+D00683E6 A443
+800683E6 A403
+
+[打完收 Bit 變 MAX]
+Type = Gameshark
+Activation = EndFrame
+D0115A64 0004
+80115A66 1400
+
+[一擊必殺（敵我都係）]
+Type = Gameshark
+Activation = EndFrame
+D013EC28 0021
+801035A2 A622
+D013EC28 0024
+801035A2 A623
+
+[L2＋○ 現時 HP 9999]
+Type = Gameshark
+Activation = EndFrame
+D013EC28 0120
+8016C904 270F
+
+[L2＋△ 現時 MP 9999]
+Type = Gameshark
+Activation = EndFrame
+D013EC28 0110
+8016C906 270F
+
+[L2＋○ 現時 HP・MP 9999]
+Type = Gameshark
+Activation = EndFrame
+D013EC28 0120
+8016C904 270F
+D013EC28 0120
+8016C906 270F
+
+[道具欄位上限 30]
+Type = Gameshark
+Activation = EndFrame
+301477BA 001E
+
+[用道具唔減]
+Type = Gameshark
+Activation = EndFrame
+D00CEBD6 A222
+800CEBD6 A200
+
+[執到道具即刻 MAX]
+Type = Gameshark
+Activation = EndFrame
+D00CE96C 0003
+800CE96E 1400
+
+[買嘢唔扣錢]
+Type = Gameshark
+Activation = EndFrame
+800F9D18 0000
+800F9D1A 0000
+
+[自動販賣機免費]
+Type = Gameshark
+Activation = EndFrame
+800ED1A8 0000
+800ED1AA 0000
+
+[賣嘢 Bit 變 MAX]
+Type = Gameshark
+Activation = EndFrame
+D00F9C6C 0004
+800F9C6E 1400
+
+[寄存屋全部道具 99 個（PAR2 之後）]
+Type = Gameshark
+Activation = EndFrame
+50007F02 0000
+8016500C 0063
+
+[寄存屋全部道具 99 個（X-Terminator）]
+Type = Gameshark
+Activation = EndFrame
+B07F0002 0000
+8016500C 0063
+
+[寄存屋攞嘢唔減]
+Type = Gameshark
+Activation = EndFrame
+80082A70 0000
+80082A72 0000
+
+[競技場成績 MAX]
+Type = Gameshark
+Activation = EndFrame
+8013EB54 03E7
+8013EB56 03E7
+8013EB58 0000
+
+[角龍商店打工營業額①]
+Type = Gameshark
+Activation = EndFrame
+D00EE8BC 1020
+800EE8BE 2402
+D00EE8BC 1020
+800EE8BC 270F
+
+[怪蛙將軍獸功績 MAX]
+Type = Gameshark
+Activation = EndFrame
+8013EB4C 270F
+
+[加速（高速化もどき）]
+Type = Gameshark
+Activation = EndFrame
+8011C33C 0000
+
+[減速]
+Type = Gameshark
+Activation = EndFrame
+8011C420 1411">📋 複製成 DuckStation .cht（41 個；要填 xx 嘅 38 個唔包）</button><p class="chintro">來源冇講適用邊個版本；Bit、照顧、道具等地址同 Rev 1 嘅資料表放埋一齊，估計係 Rev 1，但初版都可以試吓。</p><h3>主角／紀錄</h3><div class="chlist"><div class="chc"><div class="chtop"><b>Bit MAX（999,999）</b><button class="cpb" data-c="8013ECB4 423F
+8013ECB6 000F">📋 複製</button></div><pre>8013ECB4 423F
+8013ECB6 000F</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>Get gold（NG 寫法）</b><button class="cpb" data-c="8013E26C 423F
+8013E26E 000F">📋 複製</button></div><pre>8013E26C 423F
+8013E26E 000F</pre><p class="chs">來源：<a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>馴獸師等級（xx＝00–0A）</b><button class="cpb" data-c="3016C8B4 00xx">📋 複製</button></div><pre>3016C8B4 00xx</pre><p class="chn">AT 寫法：3016C8B4 000A</p><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>培育過嘅數碼暴龍數目（xx＝01–63）</b><button class="cpb" data-c="3016C8B5 00xx">📋 複製</button></div><pre>3016C8B5 00xx</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>主角改名（第 1 字至第 6 字，每字 +2）</b><button class="cpb" data-c="8013B344 xxxx
+8013B34E xxxx">📋 複製</button></div><pre>8013B344 xxxx
+8013B34E xxxx</pre><p class="chn">第 1 字 8013B344、第 6 字 8013B34E。</p><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>年／日（xx＝年、yy＝日，01–1D）</b><button class="cpb" data-c="8013E2CE 00xx
+8013E2D0 00yy">📋 複製</button></div><pre>8013E2CE 00xx
+8013E2D0 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>鐘點</b><button class="cpb" data-c="8013EC98 00xx">📋 複製</button></div><pre>8013EC98 00xx</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>分鐘</b><button class="cpb" data-c="8013ECBA 00xx">📋 複製</button></div><pre>8013ECBA 00xx</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>遊戲時間（時／分／秒／毫秒）</b><button class="cpb" data-c="3013ECFA 00xx
+3013ECF8 00xx
+3013ECFD 00xx
+3013ECFC 00xx">📋 複製</button></div><pre>3013ECFA 00xx
+3013ECF8 00xx
+3013ECFD 00xx
+3013ECFC 00xx</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>遊戲時間唔加</b><button class="cpb" data-c="800E9DDC 0000
+800E9DDE 0000">📋 複製</button></div><pre>800E9DDC 0000
+800E9DDE 0000</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>遊戲時間鎖 99:59:59:59</b><button class="cpb" data-c="3013ECFA 0063
+3013ECF8 003B
+3013ECFD 003B
+3013ECFC 003B">📋 複製</button></div><pre>3013ECFA 0063
+3013ECF8 003B
+3013ECFD 003B
+3013ECFC 003B</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div></div><h3>收集</h3><div class="chlist"><div class="chc"><div class="chtop"><b>圖鑑全開</b><button class="cpb" data-c="301650ED 00FF
+801650EE FFFF
+801650F0 FFFF
+801650F2 FFFF
+801650F4 FFFF">📋 複製</button></div><pre>301650ED 00FF
+801650EE FFFF
+801650F0 FFFF
+801650F2 FFFF
+801650F4 FFFF</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>圖鑑全開（NG 寫法）</b><button class="cpb" data-c="801650ED 00FF
+801650EE FFFF
+801650F0 FFFF
+801650F2 FFFF
+801650F4 FFFF">📋 複製</button></div><pre>801650ED 00FF
+801650EE FFFF
+801650F0 FFFF
+801650F2 FFFF
+801650F4 FFFF</pre><p class="chs">來源：<a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>全部獎牌</b><button class="cpb" data-c="801650DA FFFF
+301650DC 00FF">📋 複製</button></div><pre>801650DA FFFF
+301650DC 00FF</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>全部獎牌（NG 寫法）</b><button class="cpb" data-c="801650DA FFFF
+801650DC 00FF">📋 複製</button></div><pre>801650DA FFFF
+801650DC 00FF</pre><p class="chs">來源：<a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>全部卡片</b><button class="cpb" data-c="8016508C 9999
+8016508E 9999
+80165090 9999
+80165092 9999
+80165094 9999
+80165096 9999
+80165098 9999
+8016509A 9999
+8016509C 9999
+8016509E 9999
+801650A0 9999
+801650A2 9999
+801650A4 9999
+801650A6 9999
+801650A8 9999
+801650AA 9999
+801650AC 9999">📋 複製</button></div><pre>8016508C 9999
+8016508E 9999
+80165090 9999
+80165092 9999
+80165094 9999
+80165096 9999
+80165098 9999
+8016509A 9999
+8016509C 9999
+8016509E 9999
+801650A0 9999
+801650A2 9999
+801650A4 9999
+801650A6 9999
+801650A8 9999
+801650AA 9999
+801650AC 9999</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div></div><h3>訓練</h3><div class="chlist"><div class="chc"><div class="chtop"><b>獎勵訓練老虎機必中</b><button class="cpb" data-c="30090618 0006
+30090619 000C
+3009061A 0000
+3008EAC4 0006
+3008EAC5 000C
+3008EAC6 0000">📋 複製</button></div><pre>30090618 0006
+30090619 000C
+3009061A 0000
+3008EAC4 0006
+3008EAC5 000C
+3008EAC6 0000</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>能力一升就升到盡</b><button class="cpb" data-c="D008E548 0018
+8008E54A 1400
+D008E58C 0007
+8008E58E 1400">📋 複製</button></div><pre>D008E548 0018
+8008E54A 1400
+D008E58C 0007
+8008E58E 1400</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>食能力 chip 全部能力 MAX</b><button class="cpb" data-c="D00CEE6E A602
+800CEE6E A606">📋 複製</button></div><pre>D00CEE6E A602
+800CEE6E A606</pre><p class="chn">AT：用回復道具會全回復。</p><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div></div><h3>照顧</h3><div class="chlist"><div class="chc"><div class="chtop"><b>唔會肚餓</b><button class="cpb" data-c="800A9FCC 0000
+800A9FCE 0000">📋 複製</button></div><pre>800A9FCC 0000
+800A9FCE 0000</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>屙屎都唔加失誤</b><button class="cpb" data-c="800A93A0 0000
+800A93A2 0000">📋 複製</button></div><pre>800A93A0 0000
+800A93A2 0000</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>唔出屙屎標誌</b><button class="cpb" data-c="800AA794 0000
+800AA796 0000">📋 複製</button></div><pre>800AA794 0000
+800AA796 0000</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>出咗標誌都唔屙</b><button class="cpb" data-c="800AA83C 0000
+800AA83E 0000">📋 複製</button></div><pre>800AA83C 0000
+800AA83E 0000</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>壽命唔減</b><button class="cpb" data-c="800CD788 0000
+800CD78A 0000">📋 複製</button></div><pre>800CD788 0000
+800CD78A 0000</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>隨時可以哄瞓</b><button class="cpb" data-c="30130756 0000">📋 複製</button></div><pre>30130756 0000</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>屙屎前時間 0（NG 寫法）</b><button class="cpb" data-c="8014276C 0000">📋 複製</button></div><pre>8014276C 0000</pre><p class="chs">來源：<a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>肚餓前時間 0（NG 寫法）</b><button class="cpb" data-c="8014278A 0000">📋 複製</button></div><pre>8014278A 0000</pre><p class="chs">來源：<a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>壽命完結前時間 0（NG 寫法）</b><button class="cpb" data-c="80142794 0000">📋 複製</button></div><pre>80142794 0000</pre><p class="chs">來源：<a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div></div><h3>戰鬥</h3><div class="chlist"><div class="chc"><div class="chtop"><b>用招唔扣 MP</b><button class="cpb" data-c="D00683E6 A443
+800683E6 A403">📋 複製</button></div><pre>D00683E6 A443
+800683E6 A403</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>打完收 Bit 變 MAX</b><button class="cpb" data-c="D0115A64 0004
+80115A66 1400">📋 複製</button></div><pre>D0115A64 0004
+80115A66 1400</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>一擊必殺（敵我都係）</b><button class="cpb" data-c="D013EC28 0021
+801035A2 A622
+D013EC28 0024
+801035A2 A623">📋 複製</button></div><pre>D013EC28 0021
+801035A2 A622
+D013EC28 0024
+801035A2 A623</pre><p class="chn">L1＋○ 開，L2＋○ 解除。</p><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>L2＋○ 現時 HP 9999</b><button class="cpb" data-c="D013EC28 0120
+8016C904 270F">📋 複製</button></div><pre>D013EC28 0120
+8016C904 270F</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>L2＋△ 現時 MP 9999</b><button class="cpb" data-c="D013EC28 0110
+8016C906 270F">📋 複製</button></div><pre>D013EC28 0110
+8016C906 270F</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>L2＋○ 現時 HP・MP 9999</b><button class="cpb" data-c="D013EC28 0120
+8016C904 270F
+D013EC28 0120
+8016C906 270F">📋 複製</button></div><pre>D013EC28 0120
+8016C904 270F
+D013EC28 0120
+8016C906 270F</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div></div><h3>道具</h3><div class="chlist"><div class="chc"><div class="chtop"><b>道具欄位上限 30</b><button class="cpb" data-c="301477BA 001E">📋 複製</button></div><pre>301477BA 001E</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>第 1 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147760 00xx
+3014777E 00yy">📋 複製</button></div><pre>30147760 00xx
+3014777E 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 2 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147761 00xx
+3014777F 00yy">📋 複製</button></div><pre>30147761 00xx
+3014777F 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 3 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147762 00xx
+30147780 00yy">📋 複製</button></div><pre>30147762 00xx
+30147780 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 4 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147763 00xx
+30147781 00yy">📋 複製</button></div><pre>30147763 00xx
+30147781 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 5 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147764 00xx
+30147782 00yy">📋 複製</button></div><pre>30147764 00xx
+30147782 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 6 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147765 00xx
+30147783 00yy">📋 複製</button></div><pre>30147765 00xx
+30147783 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 7 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147766 00xx
+30147784 00yy">📋 複製</button></div><pre>30147766 00xx
+30147784 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 8 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147767 00xx
+30147785 00yy">📋 複製</button></div><pre>30147767 00xx
+30147785 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 9 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147768 00xx
+30147786 00yy">📋 複製</button></div><pre>30147768 00xx
+30147786 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 10 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147769 00xx
+30147787 00yy">📋 複製</button></div><pre>30147769 00xx
+30147787 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 11 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="3014776A 00xx
+30147788 00yy">📋 複製</button></div><pre>3014776A 00xx
+30147788 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 12 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="3014776B 00xx
+30147789 00yy">📋 複製</button></div><pre>3014776B 00xx
+30147789 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 13 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="3014776C 00xx
+3014778A 00yy">📋 複製</button></div><pre>3014776C 00xx
+3014778A 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 14 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="3014776D 00xx
+3014778B 00yy">📋 複製</button></div><pre>3014776D 00xx
+3014778B 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 15 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="3014776E 00xx
+3014778C 00yy">📋 複製</button></div><pre>3014776E 00xx
+3014778C 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 16 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="3014776F 00xx
+3014778D 00yy">📋 複製</button></div><pre>3014776F 00xx
+3014778D 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 17 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147770 00xx
+3014778E 00yy">📋 複製</button></div><pre>30147770 00xx
+3014778E 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 18 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147771 00xx
+3014778F 00yy">📋 複製</button></div><pre>30147771 00xx
+3014778F 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 19 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147772 00xx
+30147790 00yy">📋 複製</button></div><pre>30147772 00xx
+30147790 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 20 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147773 00xx
+30147791 00yy">📋 複製</button></div><pre>30147773 00xx
+30147791 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 21 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147774 00xx
+30147792 00yy">📋 複製</button></div><pre>30147774 00xx
+30147792 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 22 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147775 00xx
+30147793 00yy">📋 複製</button></div><pre>30147775 00xx
+30147793 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 23 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147776 00xx
+30147794 00yy">📋 複製</button></div><pre>30147776 00xx
+30147794 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 24 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147777 00xx
+30147795 00yy">📋 複製</button></div><pre>30147777 00xx
+30147795 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 25 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147778 00xx
+30147796 00yy">📋 複製</button></div><pre>30147778 00xx
+30147796 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 26 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="30147779 00xx
+30147797 00yy">📋 複製</button></div><pre>30147779 00xx
+30147797 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 27 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="3014777A 00xx
+30147798 00yy">📋 複製</button></div><pre>3014777A 00xx
+30147798 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 28 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="3014777B 00xx
+30147799 00yy">📋 複製</button></div><pre>3014777B 00xx
+30147799 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 29 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="3014777C 00xx
+3014779A 00yy">📋 複製</button></div><pre>3014777C 00xx
+3014779A 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>第 30 格道具種類＋數量（xx＝道具表，yy＝00–63）</b><button class="cpb" data-c="3014777D 00xx
+3014779B 00yy">📋 複製</button></div><pre>3014777D 00xx
+3014779B 00yy</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>用道具唔減</b><button class="cpb" data-c="D00CEBD6 A222
+800CEBD6 A200">📋 複製</button></div><pre>D00CEBD6 A222
+800CEBD6 A200</pre><p class="chn">AT：寄存都唔會減。</p><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>執到道具即刻 MAX</b><button class="cpb" data-c="D00CE96C 0003
+800CE96E 1400">📋 複製</button></div><pre>D00CE96C 0003
+800CE96E 1400</pre><p class="chn">AT：喺寄存屋攞出嚟都會 MAX。</p><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>買嘢唔扣錢</b><button class="cpb" data-c="800F9D18 0000
+800F9D1A 0000">📋 複製</button></div><pre>800F9D18 0000
+800F9D1A 0000</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>自動販賣機免費</b><button class="cpb" data-c="800ED1A8 0000
+800ED1AA 0000">📋 複製</button></div><pre>800ED1A8 0000
+800ED1AA 0000</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>賣嘢 Bit 變 MAX</b><button class="cpb" data-c="D00F9C6C 0004
+800F9C6E 1400">📋 複製</button></div><pre>D00F9C6C 0004
+800F9C6E 1400</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>寄存屋全部道具 99 個（PAR2 之後）</b><button class="cpb" data-c="50007F02 0000
+8016500C 0063">📋 複製</button></div><pre>50007F02 0000
+8016500C 0063</pre><p class="chn">AT 「ALL1個」同「ALL99個」列咗同一個碼，照抄。</p><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>寄存屋全部道具 99 個（X-Terminator）</b><button class="cpb" data-c="B07F0002 0000
+8016500C 0063">📋 複製</button></div><pre>B07F0002 0000
+8016500C 0063</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a></p></div><div class="chc"><div class="chtop"><b>寄存屋攞嘢唔減</b><button class="cpb" data-c="80082A70 0000
+80082A72 0000">📋 複製</button></div><pre>80082A70 0000
+80082A72 0000</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a> <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div></div><h3>小遊戲／其他</h3><div class="chlist"><div class="chc"><div class="chtop"><b>競技場成績 MAX</b><button class="cpb" data-c="8013EB54 03E7
+8013EB56 03E7
+8013EB58 0000">📋 複製</button></div><pre>8013EB54 03E7
+8013EB56 03E7
+8013EB58 0000</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>角龍商店打工營業額①</b><button class="cpb" data-c="D00EE8BC 1020
+800EE8BE 2402
+D00EE8BC 1020
+800EE8BC 270F">📋 複製</button></div><pre>D00EE8BC 1020
+800EE8BE 2402
+D00EE8BC 1020
+800EE8BC 270F</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>角龍商店打工營業額②（3E8＝1,000 Bit）</b><button class="cpb" data-c="8013EB98 0xxx">📋 複製</button></div><pre>8013EB98 0xxx</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>怪蛙將軍獸功績 MAX</b><button class="cpb" data-c="8013EB4C 270F">📋 複製</button></div><pre>8013EB4C 270F</pre><p class="chs">來源：<a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> <a href="https://www.ng173.com/thread-573512-1-1.html" target="_blank" rel="noopener">NG 論壇</a></p></div><div class="chc"><div class="chtop"><b>加速（高速化もどき）</b><button class="cpb" data-c="8011C33C 0000">📋 複製</button></div><pre>8011C33C 0000</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div><div class="chc"><div class="chtop"><b>減速</b><button class="cpb" data-c="8011C420 1411">📋 複製</button></div><pre>8011C420 1411</pre><p class="chs">來源：<a href="https://w.atwiki.jp/ps_par/pages/97.html" target="_blank" rel="noopener">PS 改造コード集 @wiki</a></p></div></div></section>
+<section class="chsec" id="ds"><h2>🦆 DuckStation 用法（Mac）</h2><div class="card"><ol>
+<li>遊戲清單右撳遊戲 → <b>Game Properties（遊戲屬性）→ Cheats</b>，開啟金手指，剔要用嘅碼。新版 DuckStation 內建下面嗰份 SLPS-01797 清單。</li>
+<li>自己加碼：撳 <b>Add Cheat</b>，Type 揀 <b>Gameshark</b>、Activation 揀 <b>EndFrame</b>，貼上碼；或者用每組上面嘅「複製成 .cht」掣，貼入文字檔再 Import。</li>
+<li>帶 <code>xx</code>／<code>yy</code>／<code>xxxx</code> 嘅碼要自己填十六進位數值先用得（用下面 ID 表）。D0（條件）同 50（重複）碼喺 Gameshark 模式都支援。</li>
+<li>⚠️ 內建清單兩個版本混埋：HP／MP 嗰兩個用 Rev 1 地址，Max Power／Maximum HP/MP／Money 用初版地址。</li></ol>
+<p class="chn">選單名同檔案位置（例如 <code>~/Library/Application Support/DuckStation/cheats/</code>）係憑記憶寫，未喺你部 Mac 核實，唔同版本會有出入。</p>
+<h3>.cht 格式</h3><pre>[Rev1 攻擊防禦速度智力 999]
+Type = Gameshark
+Activation = EndFrame
+8016C8F0 03E7
+8016C8F2 03E7
+8016C8F4 03E7
+8016C8F6 03E7</pre>
+<h3>DuckStation 內建 SLPS-01797.cht 原文 <button class="cpb" data-c="; CHTDB: ; [ DigimonWorld (Japan) {SLPS-01797} ]
+
+[Infinite Money]
+Type = Gameshark
+Activation = EndFrame
+9013E294 0098967F
+
+[Max Power]
+Type = Gameshark
+Activation = EndFrame
+90141D40 00640064
+9016B0BC 03E703E7
+9016B0C0 03E703E7
+
+[Infinite &amp; max HP]
+Type = Gameshark
+Activation = EndFrame
+8016C900 270F
+8016C904 270F
+
+[Infinite &amp; max MP]
+Type = Gameshark
+Activation = EndFrame
+8016C902 270F
+8016C906 270F
+
+[Infinite Energy]
+Type = Gameshark
+Activation = EndFrame
+80141130 0008
+
+[All sales of bytes]
+Type = Gameshark
+Activation = EndFrame
+8013E174 FFFF
+
+[Digimon / Maximum HP]
+Type = Gameshark
+Activation = EndFrame
+8016B0CC 270F
+8016B0D0 270F
+
+[Digimon / Maximum MP]
+Type = Gameshark
+Activation = EndFrame
+8016B0CE 270F
+8016B0D2 270F
+
+[Possible to sleep at any time]
+Type = Gameshark
+Activation = EndFrame
+3012FE3E 0000
+
+[Get gold]
+Type = Gameshark
+Activation = EndFrame
+9013E26C 000F423F
+
+">📋 複製</button></h3><pre>; CHTDB: ; [ DigimonWorld (Japan) {SLPS-01797} ]
+
+[Infinite Money]
+Type = Gameshark
+Activation = EndFrame
+9013E294 0098967F
+
+[Max Power]
+Type = Gameshark
+Activation = EndFrame
+90141D40 00640064
+9016B0BC 03E703E7
+9016B0C0 03E703E7
+
+[Infinite &amp; max HP]
+Type = Gameshark
+Activation = EndFrame
+8016C900 270F
+8016C904 270F
+
+[Infinite &amp; max MP]
+Type = Gameshark
+Activation = EndFrame
+8016C902 270F
+8016C906 270F
+
+[Infinite Energy]
+Type = Gameshark
+Activation = EndFrame
+80141130 0008
+
+[All sales of bytes]
+Type = Gameshark
+Activation = EndFrame
+8013E174 FFFF
+
+[Digimon / Maximum HP]
+Type = Gameshark
+Activation = EndFrame
+8016B0CC 270F
+8016B0D0 270F
+
+[Digimon / Maximum MP]
+Type = Gameshark
+Activation = EndFrame
+8016B0CE 270F
+8016B0D2 270F
+
+[Possible to sleep at any time]
+Type = Gameshark
+Activation = EndFrame
+3012FE3E 0000
+
+[Get gold]
+Type = Gameshark
+Activation = EndFrame
+9013E26C 000F423F
+
+</pre><p class="chs">來源：<a href="https://github.com/duckstation/chtdb/blob/master/cheats/SLPS-01797.cht" target="_blank" rel="noopener">duckstation/chtdb</a></p></div></section>
+<section class="chsec" id="ids"><h2>🔢 ID 表（填 xx 用）</h2><p class="chintro">照抄 <a href="https://retro-game.wow-de.com/playstation/digimonworld1/urawaza_cheat-code_digimon-world1/" target="_blank" rel="noopener">1P Only</a> 嘅表（日文原名；拍檔有港譯就加細字）。</p>
+<h3>拍檔種類 ID（3016B084／3016C8B8）</h3><div class="chgrid"><div class="chh">幼年期</div><div class="chi"><code>02</code> コロモン <small>滾球獸</small></div><div class="chi"><code>2C</code> タネモン <small>種子獸</small></div><div class="chi"><code>10</code> ツノモン <small>獨角獸</small></div><div class="chi"><code>1E</code> トコモン <small>迪哥獸</small></div><div class="chi"><code>01</code> ボタモン <small>黑球獸</small></div><div class="chi"><code>1D</code> ポヨモン <small>浮游獸</small></div><div class="chi"><code>0F</code> プニモン <small>布尼獸</small></div><div class="chi"><code>2B</code> ユラモン <small>浮球獸</small></div><div class="chh">成長期</div><div class="chi"><code>03</code> アグモン <small>亞古獸</small></div><div class="chi"><code>12</code> エレキモン</div><div class="chi"><code>11</code> ガブモン <small>加布獸</small></div><div class="chi"><code>20</code> クネモン <small>毛蟲獸</small></div><div class="chi"><code>1F</code> パタモン <small>巴達獸</small></div><div class="chi"><code>2E</code> パルモン</div><div class="chi"><code>2D</code> ピヨモン</div><div class="chi"><code>04</code> ベタモン <small>比特獸</small></div><div class="chi"><code>39</code> ペンモン</div><div class="chh">成熟期</div><div class="chi"><code>3A</code> イガモン</div><div class="chi"><code>07</code> エアドラモン <small>飛龍獸</small></div><div class="chi"><code>14</code> エンジェモン <small>天使獸</small></div><div class="chi"><code>22</code> オーガモン</div><div class="chi"><code>13</code> カブテリモン</div><div class="chi"><code>16</code> ガルルモン</div><div class="chi"><code>05</code> グレイモン</div><div class="chi"><code>33</code> クワガーモン</div><div class="chi"><code>24</code> ケンタルモン</div><div class="chi"><code>32</code> コカトリモン</div><div class="chi"><code>0A</code> シードラモン</div><div class="chi"><code>31</code> シーラモン</div><div class="chi"><code>23</code> シェルモン <small>貝殼獸</small></div><div class="chi"><code>27</code> スカモン</div><div class="chi"><code>08</code> ティラノモン</div><div class="chi"><code>06</code> デビモン <small>惡魔獸</small></div><div class="chi"><code>26</code> ドリモゲモン</div><div class="chi"><code>35</code> ナニモン</div><div class="chi"><code>0B</code> ヌメモン <small>鼻涕獸</small></div><div class="chi"><code>15</code> バードラモン <small>巴多拉獸</small></div><div class="chi"><code>25</code> バケモン <small>猛鬼獸</small></div><div class="chi"><code>3F</code> パンジャモン</div><div class="chi"><code>19</code> ベジーモン</div><div class="chi"><code>18</code> ホエーモン</div><div class="chi"><code>09</code> メラモン <small>火焰獸</small></div><div class="chi"><code>34</code> モジャモン</div><div class="chi"><code>2F</code> モノクロモン</div><div class="chi"><code>—</code> ユキダルモン</div><div class="chi"><code>21</code> ユニモン <small>獨角馬獸</small></div><div class="chi"><code>30</code> レオモン <small>獅子獸</small></div><div class="chi"><code>42</code> ヴァンデモン</div><div class="chh">完全体</div><div class="chi"><code>28</code> アンドロモン <small>安杜路獸</small></div><div class="chi"><code>2A</code> エテモン</div><div class="chi"><code>40</code> ギガドラモン</div><div class="chi"><code>29</code> ギロモン</div><div class="chi"><code>1A</code> スカルグレイモン</div><div class="chi"><code>38</code> デジタマモン</div><div class="chi"><code>37</code> ピッコロモン</div><div class="chi"><code>1C</code> ベーダモン</div><div class="chi"><code>3C</code> ヘラクルカブテリモン</div><div class="chi"><code>3B</code> ホウオウモン</div><div class="chi"><code>0D</code> マメモン</div><div class="chi"><code>3D</code> メガシードラモン</div><div class="chi"><code>36</code> メガドラモン</div><div class="chi"><code>41</code> メタルエテモン</div><div class="chi"><code>0C</code> メタルグレイモン</div><div class="chi"><code>1B</code> メタルマメモン</div><div class="chi"><code>0E</code> もんざえモン</div><div class="chh">敵デジモン</div><div class="chi"><code>43</code> ヤンマモン</div><div class="chi"><code>44</code> ゴツモン</div><div class="chi"><code>45</code> フレアリザモン</div><div class="chi"><code>46</code> ワルモンザエモン</div><div class="chi"><code>47</code> ユキアグモン</div><div class="chi"><code>48</code> ヒョーガモン</div><div class="chi"><code>49</code> プラチナスカモン</div><div class="chi"><code>4A</code> ドクネモン</div><div class="chi"><code>4B</code> シマユニモン</div><div class="chi"><code>4C</code> タンクモン</div><div class="chi"><code>4D</code> レッドべジーモン</div><div class="chi"><code>4E</code> Jモジャモン</div><div class="chi"><code>4F</code> ニセドリモゲモン</div><div class="chi"><code>50</code> ゴブリモン</div><div class="chi"><code>51</code> ツチダルモン</div><div class="chi"><code>52</code> サイケモン</div><div class="chi"><code>53</code> モドキベタモン</div><div class="chi"><code>54</code> トイアグモン</div><div class="chi"><code>55</code> ピッドモン</div><div class="chi"><code>56</code> アルラウモン</div><div class="chi"><code>57</code> ゲレモン</div><div class="chi"><code>58</code> ヴァーミリモン</div><div class="chi"><code>59</code> フーガモン</div><div class="chi"><code>5A</code> テッカモン</div><div class="chi"><code>5B</code> モリシェルモン</div><div class="chi"><code>5C</code> ガードロモン</div><div class="chi"><code>5D</code> ムーチョモン</div><div class="chi"><code>5E</code> アイスモン</div><div class="chi"><code>5F</code> アカトリモン</div><div class="chi"><code>60</code> ツカイモン</div><div class="chi"><code>61</code> シャーマモン</div><div class="chi"><code>62</code> クリアアグモン</div><div class="chi"><code>63</code> ザッソーモン</div><div class="chi"><code>64</code> アイスデビモン</div><div class="chi"><code>65</code> ダークリザモン</div><div class="chi"><code>66</code> サンドヤンマモン</div><div class="chi"><code>67</code> スノーゴブリモン</div><div class="chi"><code>68</code> ブルーメラモン</div><div class="chi"><code>69</code> グルルモン</div><div class="chi"><code>6A</code> セーバードラモン</div><div class="chi"><code>6B</code> ソウルモン</div><div class="chi"><code>6C</code> ゴーレモン</div><div class="chi"><code>6D</code> オタマモン</div><div class="chi"><code>6E</code> ゲコモン</div><div class="chi"><code>6F</code> テントモン</div><div class="chi"><code>70</code> ワルシードラモン</div><div class="chi"><code>71</code> インセキモン</div><div class="chi"><code>73</code> ムゲンドラモン</div><div class="chh">戦闘不可</div><div class="chi"><code>00</code> 主人公</div><div class="chi"><code>74</code> アナログマン</div><div class="chi"><code>75</code> ジジモン</div><div class="chi"><code>76</code> マーケット店主</div><div class="chi"><code>77</code> トノサマゲコモン</div><div class="chi"><code>78</code> スカモン大王</div><div class="chi"><code>79</code> ジュレイモン</div><div class="chi"><code>7A</code> ハグルモン</div><div class="chi"><code>7B</code> ブリキ人形</div><div class="chi"><code>7C</code> ティラノ師匠</div><div class="chi"><code>7D</code> ゴブリモン</div><div class="chi"><code>7E</code> ブラキモン</div><div class="chi"><code>7F</code> プチメラモン</div><div class="chh">データ無し</div><div class="chi"><code>3E</code> ウェアガルルモン</div><div class="chi"><code>72</code> デジモン</div></div>
+<h3>道具 ID（30147760–3014777D）</h3><div class="chgrid"><div class="chh">フロッピー</div><div class="chi"><code>00</code> 回復フロッピー</div><div class="chi"><code>01</code> 中回復フロッピー</div><div class="chi"><code>02</code> 大回復フロッピー</div><div class="chi"><code>03</code> 超回復フロッピー</div><div class="chi"><code>04</code> MPフロッピー</div><div class="chi"><code>05</code> 中MPフロッピー</div><div class="chi"><code>06</code> 大MPフロッピー</div><div class="chi"><code>07</code> ダブルフロッピー</div><div class="chi"><code>08</code> 色々フロッピー</div><div class="chi"><code>09</code> 万能フロッピー</div><div class="chi"><code>0A</code> 対変化フロッピー</div><div class="chi"><code>0B</code> 再生フロッピー</div><div class="chi"><code>0C</code> 超再生フロッピー</div><div class="chh">プラグイン</div><div class="chi"><code>0F</code> 攻撃プラグイン</div><div class="chi"><code>13</code> 攻撃プラグインS</div><div class="chi"><code>10</code> 防御プラグイン</div><div class="chi"><code>14</code> 防御プラグインS</div><div class="chi"><code>11</code> 高速プラグイン</div><div class="chi"><code>15</code> 高速プラグインS</div><div class="chi"><code>12</code> 万能プラグイン</div><div class="chh">チップ</div><div class="chi"><code>17</code> 攻撃チップ</div><div class="chi"><code>18</code> 防御チップ</div><div class="chi"><code>19</code> かしこさチップ</div><div class="chi"><code>1A</code> すばやさチップ</div><div class="chi"><code>1B</code> HPチップ</div><div class="chi"><code>1C</code> MPチップ</div><div class="chi"><code>1D</code> デビルチップA</div><div class="chi"><code>1E</code> デビルチップD</div><div class="chi"><code>1F</code> デビルチップE</div><div class="chh">育成アイテム</div><div class="chi"><code>0D</code> ばんそうこう</div><div class="chi"><code>0E</code> 薬</div><div class="chi"><code>16</code> オートパイロット</div><div class="chi"><code>20</code> けいたいトイレ</div><div class="chi"><code>21</code> トレーマニュアル</div><div class="chi"><code>22</code> 安眠まくら</div><div class="chi"><code>23</code> 敵よけお守り</div><div class="chi"><code>24</code> 敵よせシグナル</div><div class="chi"><code>25</code> 健康サンダル</div><div class="chi"><code>—</code> –</div><div class="chh">食べ物</div><div class="chi"><code>26</code> 肉</div><div class="chi"><code>27</code> 巨大肉</div><div class="chi"><code>28</code> 極上肉</div><div class="chi"><code>29</code> 挑戦ニンジン</div><div class="chi"><code>2A</code> サクラ鳥大根</div><div class="chi"><code>2B</code> ペンペンペン草</div><div class="chi"><code>2C</code> デジタケ</div><div class="chi"><code>2D</code> 雪割りキノコ</div><div class="chi"><code>2E</code> デラックスキノコ</div><div class="chi"><code>2F</code> デジぼっくり</div><div class="chi"><code>30</code> ブルーリンゴ</div><div class="chi"><code>31</code> アセロラ</div><div class="chi"><code>32</code> 黄金ドングリ</div><div class="chi"><code>33</code> ヘビーいちご</div><div class="chi"><code>34</code> 天然あまぐり</div><div class="chi"><code>35</code> モンドレイク</div><div class="chi"><code>36</code> 食用サボテン</div><div class="chi"><code>37</code> オレンジバナナ</div><div class="chi"><code>38</code> ごうりき草の実</div><div class="chi"><code>39</code> じょうぶ草の実</div><div class="chi"><code>3A</code> はやあし草の実</div><div class="chi"><code>3B</code> ものしり草の実</div><div class="chi"><code>3C</code> もりもり草の実</div><div class="chi"><code>3D</code> やすらぎ草の実</div><div class="chi"><code>3E</code> デジジャコ</div><div class="chi"><code>3F</code> デジブナ</div><div class="chi"><code>40</code> デジマス</div><div class="chi"><code>41</code> ブラックデジマス</div><div class="chi"><code>42</code> デジナマズ</div><div class="chi"><code>43</code> デジカムル</div><div class="chi"><code>44</code> くさった肉</div><div class="chi"><code>45</code> 運だめしキノコ</div><div class="chi"><code>46</code> クサリカケメロン</div><div class="chh">進化アイテム</div><div class="chi"><code>47</code> 灰色の爪</div><div class="chi"><code>48</code> 炎のかけら</div><div class="chi"><code>49</code> 燃える羽</div><div class="chi"><code>4A</code> 鉄のヒヅメ</div><div class="chi"><code>4B</code> モノクロストーン</div><div class="chi"><code>4C</code> 鋼のドリル</div><div class="chi"><code>4D</code> 牙の化石</div><div class="chi"><code>4E</code> 黒い羽</div><div class="chi"><code>4F</code> トゲこん棒</div><div class="chi"><code>50</code> 輝くたてがみ</div><div class="chi"><code>51</code> 白い羽</div><div class="chi"><code>52</code> ボロ布</div><div class="chi"><code>53</code> 電気リング</div><div class="chi"><code>54</code> 虹色の笛</div><div class="chi"><code>55</code> 風見鶏</div><div class="chi"><code>56</code> 聖なる角</div><div class="chi"><code>57</code> 重い兜</div><div class="chi"><code>58</code> ギザギザはさみ</div><div class="chi"><code>59</code> 有機肥料</div><div class="chi"><code>5A</code> イガ流の秘伝書</div><div class="chi"><code>5B</code> お供え酒</div><div class="chi"><code>5C</code> 北極星の印</div><div class="chi"><code>5D</code> 赤い貝がら</div><div class="chi"><code>5E</code> 硬いウロコ</div><div class="chi"><code>5F</code> ミスリル</div><div class="chi"><code>60</code> 氷水晶</div><div class="chi"><code>61</code> けはえ薬</div><div class="chi"><code>62</code> サングラス</div><div class="chi"><code>63</code> メタルパーツ</div><div class="chi"><code>64</code> 死を呼ぶ骨</div><div class="chi"><code>65</code> サイバーパーツ</div><div class="chi"><code>66</code> メガハンド</div><div class="chi"><code>67</code> 銀玉</div><div class="chi"><code>68</code> メタルアーマー</div><div class="chi"><code>69</code> チェンソー</div><div class="chi"><code>6A</code> 小さな槍</div><div class="chi"><code>6B</code> 愛のばんそうこう</div><div class="chi"><code>6C</code> ビームガン</div><div class="chi"><code>6D</code> 金のバナナ</div><div class="chi"><code>6E</code> 謎のタマゴ</div><div class="chi"><code>6F</code> 奇跡のルビィー</div><div class="chi"><code>70</code> ビートルダイヤ</div><div class="chi"><code>71</code> サンゴのお守り</div><div class="chi"><code>72</code> 月光の鏡</div><div class="chi"><code>7D</code> ギガハンド</div><div class="chi"><code>7E</code> 高貴なたてがみ</div><div class="chi"><code>7F</code> メタルバナナ</div><div class="chh">大切なもの</div><div class="chi"><code>73</code> 湖のぬしの笛</div><div class="chi"><code>76</code> レオモン族の石版</div><div class="chi"><code>77</code> 館のカギ</div><div class="chi"><code>78</code> はぐるま</div><div class="chi"><code>79</code> 雨ふり草の実</div><div class="chi"><code>7A</code> 血のしたたる肉</div><div class="chi"><code>7B</code> れいぞうこのカギ</div><div class="chi"><code>7C</code> 古代文字解読機</div><div class="chi"><code>74</code> ぼろい釣ざお</div><div class="chi"><code>75</code> すごい釣ざお</div></div>
+<h3>馴獸師等級（3016C8B4）</h3><div class="chgrid"><div class="chi"><code>00</code> 0.しろうとテイマー</div><div class="chi"><code>01</code> 1.かけだしテイマー</div><div class="chi"><code>02</code> 2.半人前テイマー</div><div class="chi"><code>03</code> 3.初級テイマー</div><div class="chi"><code>04</code> 4.中級テイマー</div><div class="chi"><code>05</code> 5.ベテランテイマー</div><div class="chi"><code>06</code> 6.一流テイマー</div><div class="chi"><code>07</code> 7.スーパーテイマー</div><div class="chi"><code>08</code> 8.マスターテイマー</div><div class="chi"><code>09</code> 9.天才テイマー</div><div class="chi"><code>0A</code> 10.伝説テイマー</div></div></section>
+<script>(function(){function cp(t){if(navigator.clipboard&&window.isSecureContext)return navigator.clipboard.writeText(t).catch(function(){fb(t)});fb(t);return Promise.resolve()}
+function fb(t){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}document.body.removeChild(a)}
+document.querySelectorAll('.cpb').forEach(function(b){var o=b.textContent;b.addEventListener('click',function(){cp(b.dataset.c).then(function(){b.textContent='✅ 已複製';b.classList.add('ok');setTimeout(function(){b.textContent=o;b.classList.remove('ok')},1500)})})})})();</script></main><div id="pwa-status" class="pwa-st" hidden></div><footer>《數碼暴龍大冒險》（PS1，1999）非官方攻略整合｜資料來源見 <a href="references.html">參考</a>｜數碼暴龍名用香港譯名（HKDMC 對照表等）；技能、道具名用中文版遊戲譯名（巴哈姆特）；冇官方譯名嘅由本站翻譯，存疑嘅標 ⚠️｜細字係英文原名</footer><script src="app.js?v=bbf95600b7"></script></body></html>
